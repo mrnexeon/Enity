@@ -1,4 +1,4 @@
-#include "Entity.h"
+#include "../include/Entity.h"
 
 Entity::Ptr Entity::Create() {
     return std::make_shared<Entity>();
@@ -15,3 +15,4 @@ void Entity::Detach(Entity::Ptr child) {
 std::list<Entity::Ptr> Entity::GetChildren() {
     return _children;
 }
+

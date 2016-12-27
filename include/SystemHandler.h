@@ -1,6 +1,6 @@
 #pragma once
 
-#include "System.h" // System
+#include "System.h"
 #include "Utility.h" // GetIndex()
 #include <unordered_map> // std::unordered_map
 #include <iostream> // std::cerr
@@ -55,4 +55,3 @@ void SystemHandler::Remove() {
 
     _systemsMap.erase(GetIndex<TSystem>());
 }
-

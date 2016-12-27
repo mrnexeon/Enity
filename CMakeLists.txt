@@ -4,21 +4,9 @@ project(Enity)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(BUILD_SHARED_LIBS FALSE CACHE BOOL "TRUE to build Enity as shared libraries, FALSE to build it as static libraries" FORCE)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-set(SOURCE_LIB
-        src/Component.h
-        src/Entity.h
-        src/System.h
-        src/World.h
-        src/SystemHandler.h
-        src/Utility.h
-        src/Entity.cpp
-        src/World.cpp
-        src/SystemHandler.cpp)
+set(HEADERS include/Component.h include/Entity.h include/System.h include/SystemHandler.h include/Utility.h include/World.h)
+set(SOURCES src/Entity.cpp src/SystemHandler.cpp src/World.cpp)
 
-if(${BUILD_SHARED_LIBS})
-    add_library(Enity SHARED ${SOURCE_LIB})
-else()
-    add_library(Enity STATIC ${SOURCE_LIB})
-endif()
+add_library(${PROJECT_NAME} STATIC ${SOURCES} ${HEADERS})

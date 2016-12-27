@@ -3,7 +3,7 @@
 #include <memory> // std::shared_ptr
 #include <unordered_map> // std::unordered_map
 #include <list> // std::list
-#include "Entity.h" // Entity
+#include "Entity.h"
 
 class World {
 public:

@@ -1,4 +1,4 @@
-#include "World.h"
+#include "../include/World.h"
 
 World::Ptr World::_current = std::shared_ptr<World>(); // Initializing static member
 
@@ -36,5 +36,3 @@ World::Ptr World::GetCurrent() {
 void World::SetCurrent(World::Ptr world) {
     _current = world;
 }
-
-

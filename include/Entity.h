@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Component.h" // Component
+#include "Component.h"
 #include "Utility.h" // GetIndex()
 #include <memory> // std::shared_ptr
 #include <unordered_map> // std::unordered_map
@@ -103,4 +103,3 @@ template <typename ... Ts>
 typename std::enable_if<sizeof...(Ts) == 0, bool>::type Entity::Match_impl() {
     return false;
 };
-

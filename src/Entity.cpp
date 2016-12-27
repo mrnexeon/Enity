@@ -1,5 +1,9 @@
 #include "Entity.h"
 
+Entity::Ptr Entity::Create() {
+    return std::make_shared<Entity>();
+}
+
 void Entity::Attach(Entity::Ptr child) {
     _children.push_back(child);
 }

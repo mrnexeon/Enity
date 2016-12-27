@@ -32,10 +32,6 @@ private:
     std::list<Entity::Ptr> _children;
 };
 
-Entity::Ptr Entity::Create() {
-    return std::make_shared<Entity>();
-}
-
 template<typename TComponent, typename ... Args>
 bool Entity::Add(Args &&... args) {
     static_assert(std::is_base_of<Component, TComponent>::value, "Your Own Component must inherit from Component class");

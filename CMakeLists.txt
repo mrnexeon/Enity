@@ -15,7 +15,7 @@ set(SOURCE_LIB
         src/Utility.h
         src/Entity.cpp
         src/World.cpp
-        )
+        src/SystemHandler.cpp)
 
 if(${BUILD_SHARED_LIBS})
     add_library(Enity SHARED ${SOURCE_LIB})

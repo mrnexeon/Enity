@@ -17,12 +17,6 @@ private:
     std::unordered_map<std::type_index, System::Ptr> _systemsMap;
 };
 
-void SystemHandler::Update() {
-    for (auto pair : _systemsMap) {
-        pair.second->Update();
-    }
-}
-
 template<typename TSystem, typename ... Args>
 bool SystemHandler::Add(Args &&... args) {
     static_assert(std::is_base_of<System, TSystem>::value, "Your Own System must inherit from System class");
